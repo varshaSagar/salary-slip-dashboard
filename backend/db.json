@@ -1,0 +1,102 @@
+{
+  "records": [
+    {
+      "id": "7",
+      "name": "abc",
+      "department": "IT",
+      "status": "Active",
+      "salary": 450000
+    },
+    {
+      "id": "8",
+      "name": "abcdefgh",
+      "department": "IT",
+      "status": "Active",
+      "salary": 450
+    },
+    {
+      "id": "9",
+      "name": "Ashok",
+      "department": "IT",
+      "status": "Active",
+      "salary": 45000
+    },
+    {
+      "id": "10",
+      "name": "abcdefghij",
+      "department": "IT",
+      "status": "Active",
+      "salary": 45000
+    },
+    {
+      "id": "11",
+      "name": "klm",
+      "department": "IT",
+      "status": "Active",
+      "salary": 45000
+    },
+    {
+      "id": "823d",
+      "name": "sumu",
+      "department": "IT",
+      "status": "Active",
+      "salary": 10000
+    },
+    {
+      "id": "e582",
+      "name": "Sumuk",
+      "department": "IT",
+      "status": "Active",
+      "salary": 20000
+    },
+    {
+      "id": "6458",
+      "name": "Varsha",
+      "department": "IT",
+      "status": "Active",
+      "salary": 50000
+    },
+    {
+      "id": "bae3",
+      "name": "Sumukha",
+      "department": "IT",
+      "status": "Active",
+      "salary": 100000
+    },
+    {
+      "id": "ceda",
+      "name": "Varsha",
+      "department": "IT",
+      "status": "Inactive",
+      "salary": 30000
+    },
+    {
+      "id": "ba5f",
+      "name": "Varsha",
+      "department": "IT",
+      "status": "Active",
+      "salary": 30000
+    },
+    {
+      "id": "67ac",
+      "name": "Varsha",
+      "department": "IT",
+      "status": "Active",
+      "salary": 30000
+    },
+    {
+      "id": "4806",
+      "name": "Varsha Ashok",
+      "department": "IT",
+      "status": "Active",
+      "salary": 30000
+    },
+    {
+      "id": "046a",
+      "name": "Raji",
+      "department": "HR",
+      "status": "Active",
+      "salary": 300000
+    }
+  ]
+}
