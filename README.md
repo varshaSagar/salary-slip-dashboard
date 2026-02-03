@@ -22,3 +22,18 @@ A full CRUD dashboard built with React, Redux Toolkit, Material UI, and JSON Ser
 **Backend:**
 ```bash
 npx json-server --watch backend/db.json --port 3001
+**back end runs at:**
+http://localhost:3001/records 
+
+
+**Frontend:**
+```bash
+npm install
+npm run dev
+
+**Frontend runs at:**
+http://localhost:5173
+
+
+
+
