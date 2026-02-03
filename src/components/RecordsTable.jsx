@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import { deleteRecord } from "../store/recordsSlice";
-import { Chip } from "@mui/material";
 
 import {
   Table,
@@ -12,10 +11,13 @@ import {
   Paper,
   IconButton,
   Typography,
+  Chip,
 } from "@mui/material";
 
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+
+import "./RecordsTable.css";
 
 const RecordsTable = ({ records, onEdit, showMessage }) => {
   const dispatch = useDispatch();
@@ -28,13 +30,15 @@ const RecordsTable = ({ records, onEdit, showMessage }) => {
   };
 
   return (
-    <TableContainer component={Paper} sx={{ marginBottom: 3 }}>
-      <Typography variant="h6" sx={{ padding: 2 }}>
+    <TableContainer component={Paper} className="records-table-container">
+      {/* Table Title */}
+      <Typography variant="h6" className="records-table-title">
         Employee Records
       </Typography>
 
-      <Table>
-        <TableHead>
+      <Table size="small">
+        {/* Table Header */}
+        <TableHead className="records-table-head">
           <TableRow>
             <TableCell>
               <b>Name</b>
@@ -54,6 +58,7 @@ const RecordsTable = ({ records, onEdit, showMessage }) => {
           </TableRow>
         </TableHead>
 
+        {/* Table Body */}
         <TableBody>
           {records.length === 0 ? (
             <TableRow>
@@ -63,9 +68,11 @@ const RecordsTable = ({ records, onEdit, showMessage }) => {
             </TableRow>
           ) : (
             records.map((record) => (
-              <TableRow key={record.id}>
+              <TableRow key={record.id} hover>
                 <TableCell>{record.name}</TableCell>
                 <TableCell>{record.department}</TableCell>
+
+                {/* Status Chip */}
                 <TableCell>
                   <Chip
                     label={record.status}
@@ -74,15 +81,19 @@ const RecordsTable = ({ records, onEdit, showMessage }) => {
                   />
                 </TableCell>
 
-                <TableCell>₹{record.salary}</TableCell>
+                {/* Salary */}
+                <TableCell>
+                  ₹{Number(record.salary || 0).toLocaleString()}
+                </TableCell>
 
+                {/* Actions */}
                 <TableCell align="center">
-                  {/* Edit Button */}
+                  {/* Edit */}
                   <IconButton color="primary" onClick={() => onEdit(record)}>
                     <EditIcon />
                   </IconButton>
 
-                  {/* Delete Button */}
+                  {/* Delete */}
                   <IconButton
                     color="error"
                     onClick={() => handleDelete(record.id)}

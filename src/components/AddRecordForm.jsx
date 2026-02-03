@@ -44,7 +44,7 @@ const AddRecordForm = ({ selectedRecord, clearSelection, showMessage }) => {
             status,
             salary: Number(salary),
           },
-        })
+        }),
       );
       showMessage("Record Edited Successfully ✅");
 
@@ -56,7 +56,7 @@ const AddRecordForm = ({ selectedRecord, clearSelection, showMessage }) => {
           department,
           status,
           salary: Number(salary),
-        })
+        }),
       );
     }
 
@@ -67,11 +67,9 @@ const AddRecordForm = ({ selectedRecord, clearSelection, showMessage }) => {
   };
 
   return (
-    <Card sx={{ marginBottom: 3 }}>
+    <Card sx={{ mb: 2 }}>
       <CardContent>
-        <Typography variant="h6" gutterBottom>
-          {selectedRecord ? "Edit Employee" : "Add Employee"}
-        </Typography>
+        <Typography variant="h6">Add Employee</Typography>
 
         <form onSubmit={handleSubmit}>
           <Stack spacing={2} direction={{ xs: "column", sm: "row" }}>

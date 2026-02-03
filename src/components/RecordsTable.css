@@ -1,0 +1,18 @@
+.records-table-container {
+  border: 1px solid #dfe3e8;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+.records-table-title {
+  padding: 16px;
+  font-weight: 600;
+}
+
+.records-table-head {
+  background-color: #f7f7f7;
+}
+
+.MuiTableRow-root:hover {
+  border-bottom: 1px solid #eee;
+}

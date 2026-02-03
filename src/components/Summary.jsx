@@ -1,4 +1,5 @@
-import { Card, CardContent, Typography, Grid } from "@mui/material";
+import { Paper, Typography, Stack } from "@mui/material";
+import "./Summary.css";
 
 const Summary = ({ records = [] }) => {
   const total = records.length;
@@ -17,43 +18,25 @@ const Summary = ({ records = [] }) => {
       : Math.round(records.reduce((sum, r) => sum + r.salary, 0) / total);
 
   return (
-    <Grid container spacing={2} sx={{ marginBottom: 3 }}>
-      <Grid item xs={12} sm={3}>
-        <Card>
-          <CardContent>
-            <Typography variant="h6">Total</Typography>
-            <Typography variant="h4">{total}</Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+    <Paper className="summary-bar" elevation={1}>
+      <Stack direction="row" spacing={4} flexWrap="wrap">
+        <Typography>
+          👥 <b>Total:</b> {total}
+        </Typography>
 
-      <Grid item xs={12} sm={3}>
-        <Card>
-          <CardContent>
-            <Typography variant="h6">Active</Typography>
-            <Typography variant="h4">{active}</Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+        <Typography>
+          ✅ <b>Active:</b> {active}
+        </Typography>
 
-      <Grid item xs={12} sm={3}>
-        <Card>
-          <CardContent>
-            <Typography variant="h6">Inactive</Typography>
-            <Typography variant="h4">{inactive}</Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+        <Typography>
+          ❌ <b>Inactive:</b> {inactive}
+        </Typography>
 
-      <Grid item xs={12} sm={3}>
-        <Card>
-          <CardContent>
-            <Typography variant="h6">Avg Salary</Typography>
-            <Typography variant="h4">₹{avgSalary}</Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-    </Grid>
+        <Typography>
+          💰 <b>Avg Salary:</b> ₹{avgSalary.toLocaleString()}
+        </Typography>
+      </Stack>
+    </Paper>
   );
 };
 
