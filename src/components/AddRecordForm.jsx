@@ -69,7 +69,9 @@ const AddRecordForm = ({ selectedRecord, clearSelection, showMessage }) => {
   return (
     <Card sx={{ mb: 2 }}>
       <CardContent>
-        <Typography variant="h6">Add Employee</Typography>
+        <Typography variant="h6">
+          {selectedRecord ? "✏️ Edit Employee Record" : "Add Employee"}
+        </Typography>
 
         <form onSubmit={handleSubmit}>
           <Stack spacing={2} direction={{ xs: "column", sm: "row" }}>

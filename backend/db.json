@@ -97,6 +97,20 @@
       "department": "HR",
       "status": "Active",
       "salary": 300000
+    },
+    {
+      "id": "cddf",
+      "name": "Samyukta",
+      "department": "IT",
+      "status": "Active",
+      "salary": 20000
+    },
+    {
+      "id": "b028",
+      "name": "Samyukta",
+      "department": "Finance",
+      "status": "Active",
+      "salary": 20000
     }
   ]
 }
