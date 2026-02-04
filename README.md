@@ -37,7 +37,9 @@ npm run dev
 ```
 http://localhost:5173
 ```
+## 📸 Dashboard Preview
 
+![Dashboard](./screenshots/dashboard.png)
 
 
 
